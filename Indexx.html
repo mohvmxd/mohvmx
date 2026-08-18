@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon Portfolio</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mohamed SANNI</h1>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#formation">Formation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+   <!-- Bouton langue -->
+    <button class="bouton-langue" onclick="ouvrirLangues()">
+        🇫🇷 <span>FR</span> ☰
+    </button>
+    </header>
+    <section id="accueil">
+        <h2>Bienvenue sur mon portfolio</h2>
+        <p>
+             Mohamed SANNI, étudiant en Système Informatique
+            et Logiciel.
+        </p>
+    </section>
+    <section id="apropos">
+        <h2>À propos de moi</h2>
+
+        <p>
+             Passionné par l'informatique,
+            le développement web et la programmation.
+            J'aime créer des outils simples et efficaces,
+            et apprendre chaque jour de nouvelles technologies
+        </p>
+    </section>
+    <section id="competences">
+        <h2>Mes compétences</h2>
+
+        <ul>
+            <li>HTML et CSS</li>
+            <li>C et C++</li>
+            <li>PHP</li>
+        </ul>
+    </section>
+    <section id="projets">
+        <h2>Mes projets</h2>
+
+        <div class="projet">
+            <h3>Calculatrice en C </h3>
+
+            <p>
+                Application en ligne
+                 de commande qui gère +, -, *, / avec vérification des erreurs.
+            </p>
+        </div>
+
+        <div class="projet">
+            <h3>Site web</h3>
+
+            <p>
+                Création d'un site web dynamique.
+            </p>
+        </div>
+        <div class="projet">
+            <h3>Serveur LAMP sur Kali Linux</h3>
+            <p>Installation et configuration complète d’Apache,
+              MySQL, PHP pour hébergement local
+             </p>
+    </section>
+    <section id="formation">
+        <h2>Ma formation</h2>
+
+        <div class="formation">
+            <h3>Système Informatique et Logiciel</h3>
+
+            <p>
+                Formation universitaire en informatique,
+                développement web, programmation et bases de données.
+            </p>
+        </div>
+    </section>
+    <section id="contact">
+    <h2>Contact</h2>
+        <div class="contact-info">
+             <h3>
+                 <p> Email: <a href="mailto:tonemail@gmail.com" style="color:#64ffda;">mohamedsanni225@gmail.com</a></p>
+                <p>WhatsApp : <a href="https://wa.me/229XXXXXXXX" style="color:#64ffda;">+229 95192043</a></p>
+                <p>GitHub : <a href="https://github.com/tonpseudo" style="color:#64ffda;">github.com/mohvmxd</a></p>
+           </h3>
+        </div>
+    </section>
+ <div id="fenetre-langues" class="fenetre-langues">
+
+    <div class="contenu-langues">
+
+        <!-- Fermer -->
+        <button class="fermer-langues" onclick="fermerLangues()">✕</button>
+
+        <h2>Pays / Région</h2>
+
+        <p>Sélectionnez la langue de votre choix</p>
+
+        <!-- Recherche -->
+        <div class="recherche-langue">
+            🔍
+            <input type="text" placeholder="Rechercher">
+        </div>
+
+        <!-- Français -->
+        <div class="choix-langue" onclick="changerLangue('fr')">
+            <span class="drapeau">🇫🇷</span>
+            <span>Français</span>
+            <span class="radio" id="radio-fr">●</span>
+        </div>
+
+        <!-- Anglais -->
+        <div class="choix-langue" onclick="changerLangue('en')">
+            <span class="drapeau">🇬🇧</span>
+            <span>Anglais</span>
+            <span class="radio" id="radio-en"></span>
+        </div>
+
+        <!-- Italien -->
+        <div class="choix-langue" onclick="changerLangue('it')">
+            <span class="drapeau">🇮🇹</span>
+            <span>Italien</span>
+            <span class="radio" id="radio-it"></span>
+        </div>
+
+        <!-- Néerlandais -->
+        <div class="choix-langue" onclick="changerLangue('nl')">
+            <span class="drapeau">🇳🇱</span>
+            <span>Néerlandais</span>
+            <span class="radio" id="radio-nl"></span>
+        </div>
+
+        <!-- Allemand -->
+        <div class="choix-langue" onclick="changerLangue('de')">
+            <span class="drapeau">🇩🇪</span>
+            <span>Allemand</span>
+            <span class="radio" id="radio-de"></span>
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+function ouvrirLangues() {
+    document.getElementById("fenetre-langues").style.display = "block";
+}
+
+function fermerLangues() {
+    document.getElementById("fenetre-langues").style.display = "none";
+}
+
+function ouvrirLangues() {
+    document.getElementById("fenetre-langues").style.display = "block";
+}
+
+function fermerLangues() {
+    document.getElementById("fenetre-langues").style.display = "none";
+}
+
+
+function changerLangue(langue) {
+
+    const traductions = {
+
+        fr: {
+            accueil: "Accueil",
+            apropos: "À propos",
+            competences: "Compétences",
+            projets: "Projets",
+            formation: "Formation",
+            contact: "Contact",
+
+            bienvenue: "Bienvenue sur mon portfolio",
+            presentation: "Je suis Mohamed SANNI, étudiant en Système Informatique et Logiciel.",
+
+            aproposTitre: "À propos de moi",
+            aproposTexte: "Etudiant passionné par l'informatique, le développement web et la programmation.",
+
+            competencesTitre: "Mes compétences",
+            projetsTitre: "Mes projets",
+            formationTitre: "Ma formation",
+
+            contactTitre: "Contact",
+            coordonnees: "Mes coordonnées",
+            contactez: "Contactez-moi",
+
+            nom: "Nom",
+            prenom: "Prénom",
+            adresse: "Adresse",
+            email: "Email",
+            message: "Message",
+            envoyer: "Envoyer"
+        },
+
+        en: {
+            accueil: "Home",
+            apropos: "About",
+            competences: "Skills",
+            projets: "Projects",
+            formation: "Education",
+            contact: "Contact",
+
+            bienvenue: "Welcome to my portfolio",
+            presentation: "I am Mohamed SANNI, a student in Computer Systems and Software.",
+
+            aproposTitre: "About me",
+            aproposTexte: "Passionate about computer science, web development and programming.",
+
+            competencesTitre: "My skills",
+            projetsTitre: "My projects",
+            formationTitre: "My education",
+
+            contactTitre: "Contact",
+            coordonnees: "My contact details",
+            contactez: "Contact me",
+
+            nom: "Last name",
+            prenom: "First name",
+            adresse: "Address",
+            email: "Email",
+            message: "Message",
+            envoyer: "Send"
+        },
+
+        it: {
+            accueil: "Home",
+            apropos: "Chi sono",
+            competences: "Competenze",
+            projets: "Progetti",
+            formation: "Formazione",
+            contact: "Contatti",
+
+            bienvenue: "Benvenuto nel mio portfolio",
+            presentation: "Sono Mohamed SANNI, studente di Sistemi Informatici e Software.",
+
+            aproposTitre: "Chi sono",
+            aproposTexte: "Sono uno studente appassionato di informatica, sviluppo web e programmazione.",
+
+            competencesTitre: "Le mie competenze",
+            projetsTitre: "I miei progetti",
+            formationTitre: "La mia formazione",
+
+            contactTitre: "Contatti",
+            coordonnees: "I miei contatti",
+            contactez: "Contattami",
+
+            nom: "Cognome",
+            prenom: "Nome",
+            adresse: "Indirizzo",
+            email: "Email",
+            message: "Messaggio",
+            envoyer: "Invia"
+        },
+
+        nl: {
+            accueil: "Home",
+            apropos: "Over mij",
+            competences: "Vaardigheden",
+            projets: "Projecten",
+            formation: "Opleiding",
+            contact: "Contact",
+
+            bienvenue: "Welkom op mijn portfolio",
+            presentation: "Ik ben Mohamed SANNI, student Informatiesystemen en Software.",
+
+            aproposTitre: "Over mij",
+            aproposTexte: "Ik ben een student met een passie voor informatica, webontwikkeling en programmeren.",
+
+            competencesTitre: "Mijn vaardigheden",
+            projetsTitre: "Mijn projecten",
+            formationTitre: "Mijn opleiding",
+
+            contactTitre: "Contact",
+            coordonnees: "Mijn contactgegevens",
+            contactez: "Neem contact met mij op",
+
+            nom: "Achternaam",
+            prenom: "Voornaam",
+            adresse: "Adres",
+            email: "E-mail",
+            message: "Bericht",
+            envoyer: "Versturen"
+        },
+
+        de: {
+            accueil: "Startseite",
+            apropos: "Über mich",
+            competences: "Fähigkeiten",
+            projets: "Projekte",
+            formation: "Ausbildung",
+            contact: "Kontakt",
+
+            bienvenue: "Willkommen in meinem Portfolio",
+            presentation: "Ich bin Mohamed SANNI, Student für Informatik und Software.",
+
+            aproposTitre: "Über mich",
+            aproposTexte: "Ich bin ein Student mit Leidenschaft für Informatik, Webentwicklung und Programmierung.",
+
+            competencesTitre: "Meine Fähigkeiten",
+            projetsTitre: "Meine Projekte",
+            formationTitre: "Meine Ausbildung",
+
+            contactTitre: "Kontakt",
+            coordonnees: "Meine Kontaktdaten",
+            contactez: "Kontaktieren Sie mich",
+
+            nom: "Nachname",
+            prenom: "Vorname",
+            adresse: "Adresse",
+            email: "E-Mail",
+            message: "Nachricht",
+            envoyer: "Senden"
+        }
+    };
+
+
+    const t = traductions[langue];
+
+
+    // Menu
+    const menu = document.querySelectorAll("nav a");
+
+    menu[0].textContent = t.accueil;
+    menu[1].textContent = t.apropos;
+    menu[2].textContent = t.competences;
+    menu[3].textContent = t.projets;
+    menu[4].textContent = t.formation;
+    menu[5].textContent = t.contact;
+
+
+    // Accueil
+    document.querySelector("#accueil h2").textContent = t.bienvenue;
+    document.querySelector("#accueil p").textContent = t.presentation;
+
+
+    // À propos
+    document.querySelector("#apropos h2").textContent = t.aproposTitre;
+    document.querySelector("#apropos p").textContent = t.aproposTexte;
+
+
+    // Compétences
+    document.querySelector("#competences h2").textContent = t.competencesTitre;
+
+
+    // Projets
+    document.querySelector("#projets h2").textContent = t.projetsTitre;
+
+
+    // Formation
+    document.querySelector("#formation h2").textContent = t.formationTitre;
+
+
+    // Contact
+    document.querySelector("#contact h2").textContent = t.contactTitre;
+    document.querySelector(".contact-info h3").textContent = t.coordonnees;
+    document.querySelector(".contact-form h3").textContent = t.contactez;
+
+
+    // Labels du formulaire
+    const labels = document.querySelectorAll(".contact-form label");
+
+    labels[0].textContent = t.nom;
+    labels[1].textContent = t.prenom;
+    labels[2].textContent = t.adresse;
+    labels[3].textContent = t.email;
+    labels[4].textContent = t.message;
+
+
+    // Bouton
+    document.querySelector(".contact-form button").textContent = t.envoyer;
+
+
+    // Mettre à jour le bouton du haut
+    const bouton = document.querySelector(".bouton-langue span");
+
+    if (langue === "fr") bouton.textContent = "FR";
+    if (langue === "en") bouton.textContent = "EN";
+    if (langue === "it") bouton.textContent = "IT";
+    if (langue === "nl") bouton.textContent = "NL";
+    if (langue === "de") bouton.textContent = "DE";
+
+
+    // Mettre à jour les boutons radio
+    document.querySelectorAll(".radio").forEach(radio => {
+        radio.innerHTML = "";
+    });
+
+    document.getElementById("radio-" + langue).innerHTML = "●";
+
+
+    // Fermer la fenêtre
+    fermerLangues();
+}
+</script>
+  <footer>
+        <p>© 2026 Mohamed Adissa SANNI. Conçu et codé par moi
+             Tout droit réservés © 
+         </p>
+  </footer>
+</body>
+</html>
